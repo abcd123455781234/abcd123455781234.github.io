@@ -11,23 +11,29 @@
       @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);font-family:Whitney;font-weight:500}
       @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);font-family:Whitney;font-weight:600}
       @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);font-family:Whitney;font-weight:700}
-      html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400}
-      a{color:#555599};
+      html,body{margin:0;padding:0;background-color:#000000;color:#dcddde;font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400}
+      a{color:#555599;}
+      .sub-contents{padding:5%;border:2px solid #d3d3d3;border-radius:15px;background-color:#242424;margin:1%;}
     </style>
   </head>
   <body>
-    <h1 style="text-align:center"><img src="assets/title.gif"></h1>
-    <hr>
-    <img src="assets/splosh.gif" style="float:right;width:400px;padding-right:5%;">
-    <div id="main-contents" style="display:flex;align-items:center;flex-flow:wrap;">
-      <div id="floppinator-chats" style="padding:5%;border:2px solid #26292e;border-radius:15px;background-color:#313138;margin:1%;">
+    <h1 style="text-align:center">
+      <img src="assets/title.gif">
+    </h1>
+    <h1 style="text-align:center">
+      <img src="assets/splosh.gif" style="width:10em">
+    </h1>
+
+    <!-- <img src="assets/splosh.gif" style="float:right;width:400px;padding-right:5%;"> -->
+    <div id="main-contents" style="display:flex;align-items:center;flex-flow:wrap;justify-content: center;">
+      <div id="floppinator-chats" class="sub-contents">
         <h2><img src="assets/floppinator.gif"></h2>
         <p><a href="chats/chat_27_07_2026_20_52_00.html">You have a nice butterfly</a></p>
         <p><a href="chats/chat_27_07_2026_23_47_31.html">But for now it is what it is</a></p>
       </div>
     </div>
     <div style="display:flex;justify-content:center;position:fixed;bottom:0;width:100%">
-      <img src="assets/scroller.gif" style="width:300px;">
+      <img src="assets/scroller.gif" style="width:100%;">
     </div>
   </body>
 </html>
