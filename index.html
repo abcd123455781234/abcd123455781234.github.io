@@ -5,34 +5,57 @@
     <title>Welcome!</title>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width">
+    <script src="./scripts/home.js"></script> 
     <style>
-      @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);font-family:Whitney;font-weight:300}
-      @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);font-family:Whitney;font-weight:400}
-      @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);font-family:Whitney;font-weight:500}
-      @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);font-family:Whitney;font-weight:600}
-      @font-face{src:url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);font-family:Whitney;font-weight:700}
-      html,body{margin:0;padding:0;background-color:#000000;color:#dcddde;font-family:Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400}
-      a{color:#555599;}
-      .sub-contents{padding:5%;border:2px solid #d3d3d3;border-radius:15px;background-color:#242424;margin:1%;}
+      @font-face {
+        font-family: Font;
+        src: url("./assets/font.ttf");
+      }
+      body {background-image:image-set("./assets/bg.jpg");font-family: Font;image-rendering: pixelated;font-size:larger;font-synthesis-weight: none}
+      .menu-title{display:flex;align-items:center;justify-content:start;font-style:oblique;}
+      .menu-content{display: flex;align-items:center;justify-content:end}
+      .menu{display:flex;align-items:center;justify-content: space-between; background-color:#ebb43e;box-shadow: #000000 3px 3px;padding:0px 5px 0px 5px;margin: 5px;margin-bottom: 5%;}
+      .menu-tab{background-color:#ffcf66;padding:0px 5px 0px 5px;margin: 5px 0px 5px 0px;}
+      .sub-contents{background-color:#ffcf66;box-shadow: #000000 3px 3px;}
+      .block-padding{padding: 0px 20px 0px 20px;}
+      .message-button{text-decoration: none;color:#000000;padding:0px 5px 0px 5px;box-shadow:#000000 3px 3px;}
     </style>
   </head>
   <body>
-    <h1 style="text-align:center">
-      <img src="assets/title.gif">
-    </h1>
-    <h1 style="text-align:center">
-      <img src="assets/splosh.gif" style="width:10em">
-    </h1>
-
-    <!-- <img src="assets/splosh.gif" style="float:right;width:400px;padding-right:5%;"> -->
-    <div id="main-contents" style="display:flex;align-items:center;flex-flow:wrap;justify-content: center;">
-      <div id="floppinator-chats" class="sub-contents">
-        <h2><img src="assets/floppinator.gif"></h2>
-        <p><a href="chats/chat_27_07_2026_20_52_00.html">You have a nice butterfly</a></p>
-        <p><a href="chats/chat_27_07_2026_23_47_31.html">But for now it is what it is</a></p>
-        <p><a href="chats/chat_28_07_2026_22_15_58.html">Have no classes friday</a></p>
+    <div id="message-box-background" style="display:none;top:0;left:0;padding:100%;background-color:#000000;opacity:50%;width:100%;height:200%;position:fixed">
+    </div>
+    <div id="message-box" style="display:none;top:0;left:0;margin:5%;width:90%;position:absolute">
+      <div class="sub-contents" style="padding-bottom: 10px;margin-bottom: 10px;">
+        <b><a href="#" onclick="floppinatorInfoHide()" class="message-button">X</a></b>
+        <h3 id="message-box-title" align=center></h3>
+        <p id="message-box-body" align=center style="word-wrap:break-word;text-overflow:ellipsis;text-align:justify;margin: 0px 10px 0px 10px"></p>
       </div>
     </div>
+    
+    <div id="menu" class="menu">
+      <div id="menu-title" class="menu-title">
+        Abcd123455781234's page
+      </div>
+      <div id="menu-content" class="menu-content">
+        <div id="menu-home" class="menu-tab">
+          <a href=".">Home</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="main-contents" style="display:flex;align-items:center;flex-flow:wrap;justify-content:center;background-image: url(assets/splash.gif); background-size: 200px; background-repeat: no-repeat;">
+      <div id="floppinator-chats" class="sub-contents">
+        <h2 class="block-padding">Floppinator results:</h2>
+        <b><a href="#" onclick="floppinatorInfoShow()" class="block-padding">What is it about?</a></b>
+        <ul>
+          <li><p><a href="chats/chat_27_07_2026_20_52_00.html">You have a nice butterfly</a></p></li>
+          <li><p><a href="chats/chat_27_07_2026_23_47_31.html">But for now it is what it is</a></p></li>
+          <li><p><a href="chats/chat_28_07_2026_22_15_58.html">Have no classes friday</a></p></li>
+        </ul>
+      </div>
+    </div>
+    
     <div style="display:flex;justify-content:center;position:fixed;bottom:0;width:100%">
       <img src="assets/scroller.gif" style="width:100%;">
     </div>
