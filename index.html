@@ -12,7 +12,7 @@
         src: url("./assets/font.ttf");
       }
       body {background-image:image-set("./assets/bg.jpg");font-family: Font;image-rendering: pixelated;font-size:larger;font-synthesis-weight: none}
-      .menu-title{display:flex;align-items:center;justify-content:start;font-style:oblique;}
+      .menu-title{display:flex;align-items:center;justify-content:start;font-style:oblique;word-wrap: anywhere;}
       .menu-content{display: flex;align-items:center;justify-content:end}
       .menu{display:flex;align-items:center;justify-content: space-between; background-color:#ebb43e;box-shadow: #000000 3px 3px;padding:0px 5px 0px 5px;margin: 5px;margin-bottom: 5%;}
       .menu-tab{background-color:#ffcf66;padding:0px 5px 0px 5px;margin: 5px 0px 5px 0px;}
@@ -22,6 +22,7 @@
     </style>
   </head>
   <body>
+    <img src="assets/splash.gif" style="position:fixed;" width="200px">
     <div id="message-box-background" style="display:none;top:0;left:0;padding:100%;background-color:#000000;opacity:50%;width:100%;height:200%;position:fixed">
     </div>
     <div id="message-box" style="display:none;top:0;left:0;margin:5%;width:90%;position:absolute">
@@ -44,9 +45,10 @@
     </div>
     
     
-    <div id="main-contents" style="display:flex;align-items:center;flex-flow:wrap;justify-content:center;background-image: url(assets/splash.gif); background-size: 200px; background-repeat: no-repeat;">
+    <div id="main-contents" style="display:flex;align-items:center;flex-flow:wrap;justify-content:center;">
       <div id="floppinator-chats" class="sub-contents">
-        <h2 class="block-padding">Floppinator results:</h2>
+        <span style="float:right; padding-right: 5px;font-size: small;color: #740f0f">27/07/2026 20:52</span>
+        <h2 class="block-padding">Floppinator results</h2>
         <b><a href="#" onclick="floppinatorInfoShow()" class="block-padding">What is it about?</a></b>
         <ul>
           <li><p><a href="chats/chat_27_07_2026_20_52_00.html">You have a nice butterfly</a></p></li>
@@ -57,7 +59,6 @@
     </div>
     
     <div style="display:flex;justify-content:center;position:fixed;bottom:0;width:100%">
-      <img src="assets/scroller.gif" style="width:100%;">
     </div>
   </body>
 </html>

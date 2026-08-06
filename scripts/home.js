@@ -1,5 +1,5 @@
 function floppinatorInfoShow() {
-      document.getElementById("message-box-title").innerHTML = "Floppinator"
+    document.getElementById("message-box-title").innerHTML = "Floppinator"
     document.getElementById("message-box-body").innerHTML = "\
     Floppinator is a basic piece of generative software designed with rudimentary artificial intelligence \
     that re-creates a (mostly nonsensical) conversation between my <a href='https://discord.com'>Discord</a> friend and I. \
@@ -14,7 +14,7 @@ function floppinatorInfoShow() {
     <a href='https://en.wikipedia.org/wiki/Retrieval-augmented_generation'>RAG</a> technique.<br> \
     I know that artificial intelligence is all the rage nowadays, though there has apparently been a \"decline\" in the \
     industry. I think the idea is interesting, but all these data centers might have an effect on the planet...<br><br> \
-    The list of conversation are presented in a series of bullet-points. Feel free to check them out!"
+    The different conversations are presented in a list of bullet-points. Feel free to check them out!"
     document.getElementById("message-box-background").style.display = "block";
     document.getElementById("message-box").style.display = "block";
 }
